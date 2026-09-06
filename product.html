@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สินค้าทั้งหมด | Poomjai</title>
+  <meta name="description" content="เลือกดอกไม้ Poomjai ตามความรู้สึกที่คุณอยากส่งต่อ — Fresh, Relax, Focus, Romance">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo font-display">Poomjai</a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html" class="is-active">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="page-heading">
+          <h1 class="font-display" style="font-size: var(--fs-2xl);">สินค้าทั้งหมด</h1>
+          <p class="text-lead" style="margin-inline: auto; margin-top: var(--space-2);">
+            เลือกดอกไม้ที่ใช่สำหรับความรู้สึกที่คุณอยากส่งต่อในวันนี้
+          </p>
+        </div>
+
+        <!-- ปุ่มกรองตาม mood — render โดย script.js -->
+        <div id="filter-bar" class="filter-bar"></div>
+
+        <!-- การ์ดสินค้า — render โดย script.js -->
+        <div id="product-list" class="grid grid-4 product-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container flex-between">
+      <span>&copy; 2026 Poomjai. All rights reserved.</span>
+      <a href="admin.html">Admin</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

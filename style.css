@@ -1,0 +1,471 @@
+/* =========================================================
+   Poomjai — Global Theme
+   Premium / Minimal / Quiet luxury
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500&display=swap');
+
+/* ---------------------------------------------------------
+   1. Design tokens
+   --------------------------------------------------------- */
+:root {
+  /* Core palette — ivory / cream / deep beige, bronze accent */
+  --color-bg:          #FAF6F0;
+  --color-bg-alt:      #F0E8DA;
+  --color-surface:     #FFFFFF;
+  --color-text:        #2A2520;
+  --color-text-muted:  #7A7063;
+  --color-border:      #E2D8C6;
+
+  --color-accent:      #A9834E;   /* bronze / muted gold */
+  --color-accent-dark: #7C5F38;
+  --color-accent-soft: #DCC79E;
+
+  /* Mood accents — used only as small marks (dots, underlines), never as fills */
+  --mood-fresh:    #EEC3CE;  /* Bright — pink */
+  --mood-relax:    #D3C7EA;  /* Calm — lavender */
+  --mood-focus:    #F0DE9E;  /* Inspire — yellow */
+  --mood-romance:  #B23A34;  /* Romance — red */
+
+  /* Typography */
+  --font-display: 'Noto Serif Thai', 'Cormorant Garamond', serif;
+  --font-body:    'Noto Sans Thai', 'EB Garamond', sans-serif;
+
+  /* Type scale */
+  --fs-xs:   0.8125rem;
+  --fs-sm:   0.9375rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.5rem;
+  --fs-xl:   2rem;
+  --fs-2xl:  2.75rem;
+  --fs-3xl:  3.5rem;
+
+  /* Spacing scale */
+  --space-1:  0.5rem;
+  --space-2:  0.75rem;
+  --space-3:  1rem;
+  --space-4:  1.5rem;
+  --space-5:  2.5rem;
+  --space-6:  4rem;
+  --space-7:  6rem;
+  --space-8:  8rem;
+
+  /* Layout */
+  --container-width: 1180px;
+  --border-thin: 1px solid var(--color-border);
+  --radius: 2px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 0.25s;
+}
+
+/* ---------------------------------------------------------
+   2. Reset
+   --------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid var(--color-accent-dark);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------
+   3. Typography
+   --------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.25;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-3xl); font-weight: 400; letter-spacing: 0.01em; }
+h2 { font-size: var(--fs-2xl); font-weight: 400; }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+
+p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--color-text-muted);
+}
+
+.text-lead {
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+}
+
+.text-small {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* ---------------------------------------------------------
+   4. Layout helpers
+   --------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.section {
+  padding-block: var(--space-7);
+}
+
+.section-tight {
+  padding-block: var(--space-6);
+}
+
+.stack > * + * {
+  margin-top: var(--space-3);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center { text-align: center; }
+
+/* ---------------------------------------------------------
+   5. Navigation
+   --------------------------------------------------------- */
+.site-header {
+  padding-block: var(--space-4);
+  border-bottom: var(--border-thin);
+  background-color: var(--color-bg);
+}
+
+.site-header .logo {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  letter-spacing: 0.06em;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.nav-links a {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.nav-links a:hover,
+.nav-links a.is-active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+/* ---------------------------------------------------------
+   6. Buttons
+   --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: 0.875rem 2rem;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.03em;
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  transition: background-color var(--duration) var(--ease),
+              color var(--duration) var(--ease),
+              border-color var(--duration) var(--ease);
+}
+
+.btn:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.btn-accent {
+  background-color: transparent;
+  color: var(--color-accent-dark);
+  border: 1px solid var(--color-accent-soft);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   7. Cards / Products
+   --------------------------------------------------------- */
+.card {
+  background-color: var(--color-surface);
+  border: var(--border-thin);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--duration) var(--ease);
+}
+
+.card:hover {
+  border-color: var(--color-accent-soft);
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background-color: var(--color-bg-alt);
+}
+
+.card__body {
+  padding: var(--space-4);
+}
+
+.card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.card__price {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--color-accent-dark);
+}
+
+/* Mood dot — the ONLY place mood color appears, as a small accent mark */
+.mood-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mood-dot--fresh   { background-color: var(--mood-fresh); }
+.mood-dot--relax   { background-color: var(--mood-relax); }
+.mood-dot--focus   { background-color: var(--mood-focus); }
+.mood-dot--romance { background-color: var(--mood-romance); }
+
+.mood-label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------
+   8. Hero
+   --------------------------------------------------------- */
+.hero {
+  padding-block: var(--space-8) var(--space-7);
+  text-align: center;
+}
+
+.hero__eyebrow {
+  font-size: var(--fs-xs);
+  color: var(--color-accent-dark);
+  margin-bottom: var(--space-3);
+}
+
+.hero__title {
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.hero__subtitle {
+  max-width: 46ch;
+  margin: var(--space-3) auto 0;
+}
+
+.hero__actions {
+  margin-top: var(--space-5);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   9. Divider
+   --------------------------------------------------------- */
+.divider {
+  border: none;
+  border-top: var(--border-thin);
+  margin-block: var(--space-6);
+}
+
+.divider--accent {
+  width: 48px;
+  border-top: 1px solid var(--color-accent);
+  margin-inline: auto;
+}
+
+/* ---------------------------------------------------------
+   10. Footer
+   --------------------------------------------------------- */
+.site-footer {
+  border-top: var(--border-thin);
+  padding-block: var(--space-6);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.site-footer a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* ---------------------------------------------------------
+   11. Responsive
+   --------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-3xl: 2.5rem;
+    --fs-2xl: 2rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    gap: var(--space-3);
+  }
+
+  .section { padding-block: var(--space-6); }
+  .hero { padding-block: var(--space-7) var(--space-6); }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-3xl: 2rem;
+    --fs-2xl: 1.75rem;
+    --fs-xl: 1.375rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .container {
+    padding-inline: var(--space-3);
+  }
+}

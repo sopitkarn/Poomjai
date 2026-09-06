@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pink-single",
+    "name": "Flower Pink ดอกเดี่ยว",
+    "mood": "fresh",
+    "type": "single",
+    "size": "1 ดอก",
+    "price": 89,
+    "image": "images/Pink.jpg",
+    "description": "ดอกไม้สีชมพูอ่อนหนึ่งดอก ตัดแต่งพิถีพิถัน ให้ความรู้สึกสดชื่น อ่อนโยน เหมาะสำหรับมอบให้เป็นของขวัญเล็กๆ ในวันพิเศษ"
+  },
+  {
+    "id": "pink-bouquet",
+    "name": "Flower Pink จัดช่อ",
+    "mood": "fresh",
+    "type": "bouquet",
+    "size": "ช่อ (ประมาณ 5-7 ดอก)",
+    "price": 500,
+    "image": "images/Pink.jpg",
+    "description": "ช่อดอกไม้สีชมพูอ่อน จัดเรียงอย่างประณีตเพื่อความสดชื่นและความรู้สึกอบอุ่น เหมาะสำหรับตกแต่งบ้านหรือมอบเป็นของขวัญ"
+  },
+  {
+    "id": "purple-single",
+    "name": "Flower Purple ดอกเดี่ยว",
+    "mood": "relax",
+    "type": "single",
+    "size": "1 ดอก",
+    "price": 89,
+    "image": "images/Purple.jpg",
+    "description": "ดอกไม้สีม่วงลาเวนเดอร์หนึ่งดอก ให้ความรู้สึกผ่อนคลาย สงบ เหมาะสำหรับช่วงเวลาพักผ่อนหรือมอบให้คนพิเศษ"
+  },
+  {
+    "id": "purple-bouquet",
+    "name": "Flower Purple จัดช่อ",
+    "mood": "relax",
+    "type": "bouquet",
+    "size": "ช่อ (ประมาณ 5-7 ดอก)",
+    "price": 500,
+    "image": "images/Purple.jpg",
+    "description": "ช่อดอกไม้สีม่วงลาเวนเดอร์ จัดเรียงอย่างประณีต ให้บรรยากาศผ่อนคลายและสงบนิ่ง เหมาะสำหรับตกแต่งพื้นที่พักผ่อน"
+  },
+  {
+    "id": "yellow-single",
+    "name": "Flower Yellow ดอกเดี่ยว",
+    "mood": "focus",
+    "type": "single",
+    "size": "1 ดอก",
+    "price": 89,
+    "image": "images/Yellow.jpg",
+    "description": "ดอกไม้สีเหลืองอ่อนหนึ่งดอก สื่อถึงความคิดสร้างสรรค์และแรงบันดาลใจ เหมาะสำหรับวางบนโต๊ะทำงานหรือมอบให้เป็นกำลังใจ"
+  },
+  {
+    "id": "yellow-bouquet",
+    "name": "Flower Yellow จัดช่อ",
+    "mood": "focus",
+    "type": "bouquet",
+    "size": "ช่อ (ประมาณ 5-7 ดอก)",
+    "price": 500,
+    "image": "images/Yellow.jpg",
+    "description": "ช่อดอกไม้สีเหลืองอ่อน จัดเรียงอย่างประณีต ให้พลังและแรงบันดาลใจในการเริ่มต้นสิ่งใหม่ เหมาะสำหรับมอบเป็นกำลังใจ"
+  },
+  {
+    "id": "red-single",
+    "name": "Flower Red ดอกเดี่ยว",
+    "mood": "romance",
+    "type": "single",
+    "size": "1 ดอก",
+    "price": 89,
+    "image": "images/Red.jpg",
+    "description": "ดอกไม้สีแดงหนึ่งดอก สื่อถึงความรักและความหลงใหล เหมาะสำหรับมอบให้คนที่คุณรักในโอกาสพิเศษ"
+  },
+  {
+    "id": "red-bouquet",
+    "name": "Flower Red จัดช่อ",
+    "mood": "romance",
+    "type": "bouquet",
+    "size": "ช่อ (ประมาณ 5-7 ดอก)",
+    "price": 500,
+    "image": "images/Red.jpg",
+    "description": "ช่อดอกไม้สีแดง จัดเรียงอย่างประณีตและหรูหรา สื่อถึงความรักและความใส่ใจ เหมาะสำหรับวันครบรอบหรือวันสำคัญ"
+  },
+  {
+    "id": "pink-pot",
+    "name": "กระถางดอกไม้ Pink",
+    "mood": "fresh",
+    "type": "pot",
+    "size": "1 กระถาง",
+    "price": 199,
+    "image": "images/Pink.jpg",
+    "description": "กระถางดอกไม้สีชมพูอ่อน จัดแต่งพร้อมกระถางดีไซน์เรียบหรู เหมาะสำหรับตกแต่งบ้านหรือมุมทำงานให้ดูสดชื่นตลอดวัน"
+  },
+  {
+    "id": "purple-pot",
+    "name": "กระถางดอกไม้ Purple",
+    "mood": "relax",
+    "type": "pot",
+    "size": "1 กระถาง",
+    "price": 199,
+    "image": "images/Purple.jpg",
+    "description": "กระถางดอกไม้สีม่วงลาเวนเดอร์ จัดแต่งพร้อมกระถางดีไซน์เรียบหรู เหมาะสำหรับสร้างมุมพักผ่อนที่สงบและผ่อนคลาย"
+  },
+  {
+    "id": "yellow-pot",
+    "name": "กระถางดอกไม้ Yellow",
+    "mood": "focus",
+    "type": "pot",
+    "size": "1 กระถาง",
+    "price": 199,
+    "image": "images/Yellow.jpg",
+    "description": "กระถางดอกไม้สีเหลืองอ่อน จัดแต่งพร้อมกระถางดีไซน์เรียบหรู เหมาะสำหรับวางบนโต๊ะทำงานเพื่อเสริมแรงบันดาลใจ"
+  },
+  {
+    "id": "red-pot",
+    "name": "กระถางดอกไม้ Red",
+    "mood": "romance",
+    "type": "pot",
+    "size": "1 กระถาง",
+    "price": 199,
+    "image": "images/Red.jpg",
+    "description": "กระถางดอกไม้สีแดง จัดแต่งพร้อมกระถางดีไซน์หรูหรา เหมาะสำหรับมอบเป็นของขวัญหรือตกแต่งพื้นที่ให้ดูมีชีวิตชีวา"
+  }
+]

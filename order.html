@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ยืนยันการสั่งซื้อ | Poomjai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo font-display">Poomjai</a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="page-heading">
+          <h1 class="font-display" style="font-size: var(--fs-2xl);">ยืนยันการสั่งซื้อ</h1>
+          <p class="text-lead" style="margin-inline: auto; margin-top: var(--space-2);">
+            กรอกข้อมูลให้ครบถ้วน ทีมงานจะติดต่อกลับเพื่อยืนยันและนัดจัดส่ง
+          </p>
+        </div>
+
+        <div class="form-panel">
+          <form id="orderForm" novalidate>
+            <div class="form-group">
+              <label for="customerName">ชื่อลูกค้า</label>
+              <input type="text" id="customerName" name="customerName" placeholder="ชื่อ-นามสกุล" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact">เบอร์โทร / Line</label>
+              <input type="text" id="contact" name="contact" placeholder="เบอร์โทรศัพท์ หรือ Line ID" required>
+            </div>
+
+            <div class="form-group">
+              <label for="items">รายการสินค้า</label>
+              <input type="text" id="items" name="items" placeholder="รายการสินค้าจะถูกเติมให้อัตโนมัติ" readonly>
+              <span class="hint">เติมอัตโนมัติจากสินค้าที่คุณเลือก</span>
+            </div>
+
+            <div class="form-group">
+              <label for="total">จำนวนเงินรวม (บาท)</label>
+              <input type="text" id="total" name="total" placeholder="ราคาจะถูกเติมให้อัตโนมัติ" readonly>
+              <span class="hint">เติมอัตโนมัติจากสินค้าที่คุณเลือก</span>
+            </div>
+
+            <div class="form-group">
+              <label for="note">หมายเหตุ</label>
+              <textarea id="note" name="note" placeholder="ระบุที่อยู่จัดส่ง หรือความต้องการเพิ่มเติม (ถ้ามี)"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">ยืนยันสั่งซื้อ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container flex-between">
+      <span>&copy; 2026 Poomjai. All rights reserved.</span>
+      <a href="admin.html">Admin</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
